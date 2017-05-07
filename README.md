@@ -22,9 +22,9 @@ I tried to dockerize both and created a image so as to save time and not to re-c
     docker pull sunlnx/puppetclient
 ```  
 How to fireup your containers and work on the interactively:  
-puppetmaster  
+####puppetmaster  
 ```docker run -it --name puppetmaster --hostname puppetmaster.example.com sunlnx/puppetmaster /bin/bash  
-   service puppetmaster restart
-```
-puppetclient  
+service puppetmaster restart```  
+
+####puppetclient  
 ```docker run -it --name puppetclient --hostname puppetclient.example.com sunlnx/puppetclient /bin/bash```
