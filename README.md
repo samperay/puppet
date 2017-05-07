@@ -17,14 +17,16 @@ we could configure different puppet modules for different **environment**(develo
 
 How to implement details can be found in ```http://sunlnx.blogspot.in/2016/11/puppet-manifests-and-modules-in.html```  
 
-I tried to dockerize both and created a image so as to save time and not to re-configure or re-install. you could test using the containers and once your testings are completed can be removed. If you have installed docker try to pull both the images and start to fireup the containers.  
-``` docker pull sunlnx/puppetmaster
-    docker pull sunlnx/puppetclient
-```  
-How to fireup your containers and work on the interactively:  
-####puppetmaster  
-```docker run -it --name puppetmaster --hostname puppetmaster.example.com sunlnx/puppetmaster /bin/bash  
-service puppetmaster restart```  
+I tried to dockerize both and created a image so as to save time and not to re-configure or re-install. you could test using the containers and once your testings are completed can be removed. If you have installed docker try to pull both the images and start to fireup the containers  
 
-####puppetclient  
+```docker pull sunlnx/puppetmaster```
+```docker pull sunlnx/puppetclient```  
+
+### Fire your containers interactively    
+
+#### puppetmaster  
+```docker run -it --name puppetmaster --hostname puppetmaster.example.com sunlnx/puppetmaster /bin/bash```  
+```service puppetmaster restart```  
+
+#### puppetclient  
 ```docker run -it --name puppetclient --hostname puppetclient.example.com sunlnx/puppetclient /bin/bash```
